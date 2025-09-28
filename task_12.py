@@ -1,49 +1,48 @@
-def calculate_mobile_bill():
-    # Базовые параметры тарифа
-    base_minutes = 60
-    base_sms = 30
-    base_data_mb = 1024  # 1 ГБ = 1024 МБ
-    base_price = 24.99
+base_minutes = 60
+base_sms = 30
+base_data_mb = 1024 
+base_price = 24.99
 
-    # Стоимость дополнительных услуг
-    extra_minute_price = 0.89
-    extra_sms_price = 0.59
-    extra_mb_price = 0.79
-    tax_rate = 0.02
+extra_minute_price = 0.89
+extra_sms_price = 0.59
+extra_mb_price = 0.79
+tax_rate = 0.02
 
-    # Ввод данных от пользователя
-    minutes_used = int(input("Введите количество использованных минут: "))
-    sms_used = int(input("Введите количество отправленных SMS: "))
-    data_used_mb = int(input("Введите объём интернет-трафика в МБ: "))
+minutes_used = int(input("Введите количество использованных минут: "))
+sms_used = int(input("Введите количество отправленных SMS: "))
+data_used_mb = int(input("Введите объём интернет-трафика в МБ: "))
 
-    # Расчёт перерасхода
-    extra_minutes = max(0, minutes_used - base_minutes)
-    extra_sms = max(0, sms_used - base_sms)
-    extra_data_mb = max(0, data_used_mb - base_data_mb)
+if minutes_used > base_minutes:
+    extra_minutes = minutes_used - base_minutes
+else:
+    extra_minutes = 0
 
-    # Стоимость дополнительных услуг
-    extra_minutes_cost = extra_minutes * extra_minute_price
-    extra_sms_cost = extra_sms * extra_sms_price
-    extra_data_cost = extra_data_mb * extra_mb_price
+if sms_used > base_sms:
+    extra_sms = sms_used - base_sms
+else:
+    extra_sms = 0
 
-    # Общая сумма до налога
-    subtotal = base_price + extra_minutes_cost + extra_sms_cost + extra_data_cost
+if data_used_mb > base_data_mb:
+    extra_data_mb = data_used_mb - base_data_mb
+else:
+    extra_data_mb = 0
 
-    # Налог
-    tax = subtotal * tax_rate
+extra_minutes_cost = extra_minutes * extra_minute_price
+extra_sms_cost = extra_sms * extra_sms_price
+extra_data_cost = extra_data_mb * extra_mb_price
 
-    # Итоговая сумма
-    total = subtotal + tax
+subtotal = base_price + extra_minutes_cost + extra_sms_cost + extra_data_cost
 
-    # Вывод
-    print("\nБазовая сумма тарифа:", base_price, "руб.")
-    if extra_minutes > 0:
-        print("Дополнительные минуты: ", extra_minutes, extra_minutes_cost, "руб.")
-    if extra_sms > 0:
-        print("Дополнительные SMS: ", extra_sms,  extra_sms_cost, "руб.")
-    if extra_data_mb > 0:
-        print("Дополнительный интернет: ", extra_data_mb, "МБ ", extra_data_cost, "руб.")
-    print("Налог (2%): ", tax, " руб.")
-    print("Итоговая сумма к оплате: ", total, "руб.")
+tax = subtotal * tax_rate
 
-calculate_mobile_bill()
+total = subtotal + tax
+
+print("\nБазовая сумма тарифа:", base_price, "руб.")
+if extra_minutes > 0:
+    print("Дополнительные минуты:", extra_minutes, "шт. →", extra_minutes_cost, "руб.")
+if extra_sms > 0:
+    print("Дополнительные SMS:", extra_sms, "шт. →", extra_sms_cost, "руб.")
+if extra_data_mb > 0:
+    print("Дополнительный интернет:", extra_data_mb, "МБ →", extra_data_cost, "руб.")
+print("Налог (2%):", tax, "руб.")
+print("Итоговая сумма к оплате:", total, "руб.")
