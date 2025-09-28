@@ -21,4 +21,4 @@ if parts[50]: print(f"50 : {parts[50]}")
 if parts[10]: print(f"10 : {parts[10]}")
 if parts[5]: print(f"5 : {parts[5]}")
 if parts[2]: print(f"2 : {parts[2]}")
-if parts[1]: print(f"1 : {parts[1]}")
+if parts[1]: print(f"1 : {parts[1]}")# Task 3 solution

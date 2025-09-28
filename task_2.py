@@ -11,3 +11,4 @@ else:
 print(stroka)
 
 
+# Task 1 solution

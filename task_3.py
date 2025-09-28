@@ -9,3 +9,4 @@ match password_string:
     case _:
         print("Надёжный пароль")
 
+# Task 2 solution
