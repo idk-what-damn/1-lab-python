@@ -1,0 +1,32 @@
+warning: in the working copy of 'task_2.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'task_3.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'task_4.py', LF will be replaced by CRLF the next time Git touches it
+[1mdiff --git a/task_2.py b/task_2.py[m
+[1mindex 3eb84c2..a7c7e2a 100644[m
+[1m--- a/task_2.py[m
+[1m+++ b/task_2.py[m
+[36m@@ -11,3 +11,4 @@[m [melse:[m
+ print(stroka)[m
+ [m
+ [m
+[32m+[m[32m# Task 1 solution[m
+[1mdiff --git a/task_3.py b/task_3.py[m
+[1mindex 985e75d..7c5c0b5 100644[m
+[1m--- a/task_3.py[m
+[1m+++ b/task_3.py[m
+[36m@@ -9,3 +9,4 @@[m [mmatch password_string:[m
+     case _:[m
+         print("Надёжный пароль")[m
+ [m
+[32m+[m[32m# Task 2 solution[m
+[1mdiff --git a/task_4.py b/task_4.py[m
+[1mindex 5d4ec12..95720d9 100644[m
+[1m--- a/task_4.py[m
+[1m+++ b/task_4.py[m
+[36m@@ -21,4 +21,4 @@[m [mif parts[50]: print(f"50 : {parts[50]}")[m
+ if parts[10]: print(f"10 : {parts[10]}")[m
+ if parts[5]: print(f"5 : {parts[5]}")[m
+ if parts[2]: print(f"2 : {parts[2]}")[m
+[31m-if parts[1]: print(f"1 : {parts[1]}")[m
+\ No newline at end of file[m
+[32m+[m[32mif parts[1]: print(f"1 : {parts[1]}")# Task 3 solution[m
