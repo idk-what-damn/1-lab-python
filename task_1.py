@@ -8,4 +8,4 @@ words = fio_string.split()
 if count_words(fio_string) != 3:
     pass
 else:
-        print(words[0] + " " + words[1][0] + "." +  words[2][0] + ".")
+        print(words[0] + " " + words[1][0] + "." +  words[2][0] + ".")# Task 1 solution
