@@ -3,7 +3,6 @@ try:
     month = int(input("Введите месяц рождения (1–12): "))
 
     if 1 <= day <= 31 and 1 <= month <= 12:
-        # Определение знака зодиака напрямую
         if (month == 1 and day >= 20) or (month == 2 and day <= 18):
             sign = "Водолей"
         elif (month == 2 and day >= 19) or (month == 3 and day <= 20):
