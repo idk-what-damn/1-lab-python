@@ -1,11 +1,7 @@
-def count_words(text):
-        if not text.strip():
-            return "Строка пустая!"
-        word = text.split()
-        return len(word)
 fio_string = input("Введите ваше ФИО: ")
 words = fio_string.split()
-if count_words(fio_string) != 3:
-    pass
+
+if len(words) == 3:
+    print(words[0] + " " + words[1][0] + "." + words[2][0] + ".")
 else:
-        print(words[0] + " " + words[1][0] + "." +  words[2][0] + ".")# Task 1 solution
+    print("Ошибка: нужно ввести exactly 3 слова (Фамилия Имя Отчество)")

@@ -10,5 +10,3 @@ else:
     stroka = stroka.replace("o", '')
 print(stroka)
 
-
-# Task 1 solution
