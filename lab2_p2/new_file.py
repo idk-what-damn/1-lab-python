@@ -2,7 +2,7 @@
 def cache(func):
     def wrapper(*args, **kwargs):
         code = func(*args, **kwargs)
-        with open("cache.txt", "w", encoding="utf-8") as f:
+        with open("cache.txt", "a", encoding="utf-8") as f:
             f.write(f"Стороны {args} -> {code}\n")
         return code
     return wrapper
@@ -15,14 +15,14 @@ def check_trian(a: int, b: int, c: int):
     new_spisok.remove(max_value)
     last_value = max(new_spisok)
     if last_value + min_value <= max_value:
-        print(f"Треугольника с такими сторонами {a}, {b}, {c} не существует")
+        return f"Треугольника с такими сторонами {a}, {b}, {c} не существует"
     else:
         if max_value**2 == last_value**2 + min_value**2:
-            print("Это прямоугольный треугольник")
+            return "Это прямоугольный треугольник"
         elif max_value**2 > last_value**2 + min_value**2:
-            print("Это тупоугольный треугольник")
+            return "Это тупоугольный треугольник"
         elif max_value**2 < last_value**2 + min_value**2:
-            print("Это остроугольный треугольник")
+            return "Это остроугольный треугольник"
 
 while True:
     print("---Меню---")
