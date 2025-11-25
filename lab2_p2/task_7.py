@@ -3,15 +3,20 @@ def merge_sorted_list(list1, list2):
         return list2
     if not list2:
         return list1
-
     if list1[0] <= list2[0]:
         return [list1[0]] + merge_sorted_list(list1[1:], list2)
     else:
         return [list2[0]] + merge_sorted_list(list1, list2[1:])
 
 
-list_a = [1, 3, 5, 7]
-list_b = [2, 4, 6, 8, 10]
+list_a = list((input("Введите элмеенты для первого списка в строку: ").replace(" ", "")))
+list_b = list((input("Введите элементы для второго списка в строку: ").replace(" ", "")))
+for item in range(len(list_a)):
+    list_a[item] = int(list_a[item])
+for item in range(len(list_b)):
+    list_b[item] = int(list_b[item])
+list_a = sorted(list_a)
+list_b = sorted(list_b)
 
 print("Слияние списков:")
 print("  Первый список:", list_a)

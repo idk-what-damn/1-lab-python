@@ -1,7 +1,7 @@
 def cache(func):
     memory = {}
     def wrapper(*args):
-        key = make_key(args)
+        key = args
         if key in memory:
             print("Результат найден в кэше для аргументов:", args)
             return memory[key]
@@ -11,8 +11,8 @@ def cache(func):
         return result
     return wrapper
 
-def make_key(args):
-    return "_".join(str(arg) for arg in args)
+# def make_key(args):
+#     return "_".join(str(arg) for arg in args)
 
 @cache
 def slow_add(a, b):

@@ -12,6 +12,7 @@ def unique_elements(data, seen=None):
 
 list_a = [1, 2, 3, [4, 3, 1], 5, [6, [7, [10], 8, [9, 2 ,3]]]]
 
+
 print("Исходный вложенный список:")
 print(list_a)
 

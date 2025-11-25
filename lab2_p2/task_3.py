@@ -30,8 +30,8 @@ def greet(name):
     print(f"Привет, {name}!")
 
 @log_calls("Lab_2_2/call_log.txt")
-def add(a, b):
-    result = a + b
+def add(*args):
+    result = sum(args)
     print(f"Сумма: {result}")
     return result
 
